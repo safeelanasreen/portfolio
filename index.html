@@ -154,7 +154,7 @@
         </div>
       </section>
       <!-- ***********************About ************************** -->
-      <section class="about section">
+      <section class="about section anim">
         <div class="dot-shape position-absolute">
           <figure class="mb-0">
             <img src="./images/shape-2.png" alt="dot-shape" />
@@ -362,50 +362,134 @@
         </div>
       </section>
       <!-- -------------experience Section ------------------- -->
-      <section class="experience section">
+      <section class="experience section anim">
         <div class="container">
           <h5 class="title">Experience</h5>
-          <div class="experience_wrapper row">
-            <div class="col-md-3 position-relative">
-              <div class="year bg">
-                <p class="mb-0">2022</p>
-              </div>
-              <span class="circle position-absolute">
-                
-              </span>
-            </div>
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active btn"
+                id="pills-experience-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-experience"
+                type="button"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+              >
+                Experience
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link btn"
+                id="pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-education"
+                type="button"
+                role="tab"
+                aria-controls="pills-education"
+                aria-selected="false"
+              >
+                Education
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="pills-experience"
+              role="tabpanel"
+              aria-labelledby="pills-experience-tab"
+              tabindex="0"
+            >
+              <div class="experience_wrapper row">
+                <div class="col-md-3 position-relative">
+                  <div class="year bg">
+                    <p class="mb-0">2022</p>
+                  </div>
+                  <span class="circle position-absolute"> </span>
+                </div>
 
-            <div class="col-md-9">
-              <div class="right">
-                <h5>Software Developer</h5>
-                <h5 class="sub-ttl">webandcrafts</h5>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Molestias quas cumque, eligendi vero officiis accusantium
-                  atque rem voluptatem vel aspernatur voluptate dolorem quisquam
-                  officia eveniet corporis? A ab nihil ad!
-                </p>
-              </div>
-            </div>
-            <div class="col-md-3 position-relative">
-              <div class="year bg">
-                <p class="mb-0">2020</p>
-              </div>
-              <span class="circle position-absolute">
-                
-              </span>
-            </div>
+                <div class="col-md-9">
+                  <div class="right">
+                    <h5>Software Developer</h5>
+                    <h5 class="sub-ttl">webandcrafts</h5>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Molestias quas cumque, eligendi vero officiis accusantium
+                      atque rem voluptatem vel aspernatur voluptate dolorem
+                      quisquam officia eveniet corporis? A ab nihil ad!
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-3 position-relative">
+                  <div class="year bg">
+                    <p class="mb-0">2020</p>
+                  </div>
+                  <span class="circle position-absolute"> </span>
+                </div>
 
-            <div class="col-md-9">
-              <div class="right">
-                <h5>Software Developer</h5>
-                <h5 class="sub-ttl">webandcrafts</h5>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Molestias quas cumque, eligendi vero officiis accusantium
-                  atque rem voluptatem vel aspernatur voluptate dolorem quisquam
-                  officia eveniet corporis? A ab nihil ad!
-                </p>
+                <div class="col-md-9">
+                  <div class="right">
+                    <h5>Software Developer</h5>
+                    <h5 class="sub-ttl">webandcrafts</h5>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Molestias quas cumque, eligendi vero officiis accusantium
+                      atque rem voluptatem vel aspernatur voluptate dolorem
+                      quisquam officia eveniet corporis? A ab nihil ad!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-education"
+              role="tabpanel"
+              aria-labelledby="pills-education-tab"
+              tabindex="0"
+            >
+              <div class="experience_wrapper row">
+                <div class="col-md-3 position-relative">
+                  <div class="year bg">
+                    <p class="mb-0">2022</p>
+                  </div>
+                  <span class="circle position-absolute"> </span>
+                </div>
+
+                <div class="col-md-9">
+                  <div class="right">
+                    <h5>Software Developer</h5>
+                    <h5 class="sub-ttl">webandcrafts</h5>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Molestias quas cumque, eligendi vero officiis accusantium
+                      atque rem voluptatem vel aspernatur voluptate dolorem
+                      quisquam officia eveniet corporis? A ab nihil ad!
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-3 position-relative">
+                  <div class="year bg">
+                    <p class="mb-0">2020</p>
+                  </div>
+                  <span class="circle position-absolute"> </span>
+                </div>
+
+                <div class="col-md-9">
+                  <div class="right">
+                    <h5>Software Developer</h5>
+                    <h5 class="sub-ttl">webandcrafts</h5>
+                    <p>
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Molestias quas cumque, eligendi vero officiis accusantium
+                      atque rem voluptatem vel aspernatur voluptate dolorem
+                      quisquam officia eveniet corporis? A ab nihil ad!
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

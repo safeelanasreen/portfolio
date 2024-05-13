@@ -49,3 +49,43 @@ document.addEventListener("DOMContentLoaded", function () {
   // Set interval to toggle active class every 40 seconds
   setInterval(toggleActiveItem, 5000); // 40 seconds = 40000 milliseconds
 });
+
+//anim class visible at viewport
+window.addEventListener("load", () => {
+  function isInViewport(el, gap) {
+      let top = el.offsetTop;
+      let left = el.offsetLeft;
+      let height = el.offsetHeight;
+      // console.log(el.offsetParent);
+      while (el.offsetParent) {
+          el = el.offsetParent;
+          top += el.offsetTop;
+          left += el.offsetLeft;
+      }
+      return (
+          (window.pageYOffset + window.innerHeight - gap) >= (top) &&
+          (window.pageYOffset) <= (height + top)
+      );
+  }
+  let getElem = document.querySelectorAll('.anim');
+  //please change as per the design
+  const breakPoints = {
+      desktop: 250,
+      laptop: 80,
+      tab: 50,
+      mobile: 30
+  };
+  let targetGap;
+  window.innerWidth >= 1200 ? targetGap = breakPoints.desktop :
+      window.innerWidth >= 1024 ? targetGap = breakPoints.laptop :
+      window.innerWidth >= 768 ? targetGap = breakPoints.tab :
+      targetGap = breakPoints.mobile;
+
+  function anim() {
+      getElem.forEach(element => {
+          isInViewport(element, targetGap) ? element.classList.add("visible") : null;
+      })
+  }
+  getElem.length > 0 ? (window.addEventListener('scroll', anim, false)) : null;
+  getElem.length > 0 ? anim() : null;
+}, false);
