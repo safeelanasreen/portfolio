@@ -23,6 +23,7 @@
 .section {
   overflow: hidden;
   padding: 40px 0;
+  position: relative;
 }
 @media (min-width: 768px) {
   .section {
@@ -455,7 +456,7 @@ ul li {
 
 .about {
   position: relative;
-  background-color: var(--bg-secondary);
+  background-color: #000;
 }
 .about .dot-shape {
   width: 90px;
@@ -584,7 +585,7 @@ ul li {
 }
 
 .experience {
-  background-color: var(--bg-secondary);
+  background-color: #000;
   position: relative;
 }
 .experience .tab_wrap {
@@ -702,13 +703,15 @@ ul li {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #000;
-  -webkit-clip-path: circle(100% at 50% 50%);
-          clip-path: circle(100% at 50% 50%);
+  left: 0;
+  top: 0;
+  background-color: var(--bg-secondary);
+  -webkit-clip-path: circle(0% at 50% 50%);
+          clip-path: circle(0% at 50% 50%);
   transition: clip-path 1.5s ease, -webkit-clip-path 1.5s ease;
 }
 
-.experience.visible .anim-area {
-  -webkit-clip-path: circle(0% at 50% 50%);
-          clip-path: circle(0% at 50% 50%);
+.section.visible .anim-area {
+  -webkit-clip-path: circle(100% at 50% 50%);
+          clip-path: circle(100% at 50% 50%);
 }/*# sourceMappingURL=style.css.map */
