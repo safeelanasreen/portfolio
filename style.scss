@@ -3,11 +3,25 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
-    --color: #e7b759;
+    // --color: #e7b759;
     // color:var(--color);
+    --color: #dfa08b;
     --text-color: #e4e4e4;
     color: var(--text-color);
     --bg-secondary: #31333b;
+}
+.fade-in {
+    opacity: 0.001;
+    transition:
+        opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: scale(0.96) translateY(24px);
+}
+.visible {
+    .fade-in {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 .section {
     overflow: hidden;
@@ -26,24 +40,27 @@
     padding: 12px 25px;
     font-weight: 500;
 }
-.nav-pills{
+.nav-pills {
     column-gap: 25px;
+    margin-bottom: 40px;
+    @media (min-width:992px){
+        margin-bottom: 70px;
+    }
 }
-.nav-link{
-    --bs-nav-pills-link-active-color:#fff;
-    --bs-nav-pills-link-active-bg:var(--color);
-    --bs-nav-link-color:var(--color);
+.nav-link {
+    --bs-nav-pills-link-active-color: #fff;
+    --bs-nav-pills-link-active-bg: var(--color);
+    --bs-nav-link-color: var(--color);
     border-color: var(--color) !important;
-    --bs-btn-hover-bg:var(--color);
+    --bs-btn-hover-bg: var(--color);
     font-size: 20px;
     border: 1px solid var(--color);
- background-color:transparent;
+    background-color: transparent;
     --bs-nav-link-padding-x: 25px;
-    --bs-nav-link-padding-y:12px;
+    --bs-nav-link-padding-y: 12px;
     font-weight: 500;
-    --bs-nav-link-hover-color:#fff;
-    --bs-btn-hover-border-color:var(--color);
-
+    --bs-nav-link-hover-color: #fff;
+    --bs-btn-hover-border-color: var(--color);
 }
 a {
     color: var(--color);
@@ -58,9 +75,12 @@ img {
     background-color: #3b3c41;
 }
 .title {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 500;
-    margin-bottom: 18px;
+    margin-bottom: 30px;
+    @media (min-width: 768px) {
+        font-size: 50px;
+    }
 }
 .header {
     width: 100vw;
@@ -159,30 +179,49 @@ ul {
 .btn-wrap {
     max-width: fit-content;
 }
-
+// *********banner*************
 .banner-section {
-    height: calc(100vh - 74px);
-    padding-top: 20px;
     display: flex;
-    align-items: flex-end;
+    // align-items: flex-end;
+    align-items: center;
     position: relative;
+    @media (min-width: 992px) {
+        height: calc(100vh - 74px);
+    }
     .banner-wrap {
         align-items: center;
         .title-name {
             margin-bottom: 15px;
             font-weight: 400;
-            font-size: 35px;
+            font-size: 25px;
+            @media (min-width: 768px) {
+                font-size: 35px;
+            }
             span {
                 color: var(--color);
-                font-size: 45px;
+                font-size: 35px;
                 font-weight: 600;
+                @media (min-width: 768px) {
+                    font-size: 45px;
+                }
             }
         }
     }
     .left-content {
+        overflow: hidden;
+
+        @media (max-width: 767.98px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         p {
-            margin-bottom: 40px;
-            font-size: 25px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            @media (min-width: 768px) {
+                margin-bottom: 40px;
+                font-size: 25px;
+            }
         }
     }
     .img-anim {
@@ -190,11 +229,14 @@ ul {
     }
     .img_wrap {
         position: relative;
-        max-width: 405px;
+        max-width: 90%;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
         overflow: hidden;
+        @media (min-width: 768px) {
+            max-width: 405px;
+        }
         &::after {
             content: "";
             position: relative;
@@ -206,12 +248,15 @@ ul {
         }
 
         figure {
-            --bs-aspect-ratio: 141.48%;
+            --bs-aspect-ratio: 100%;
             width: 100%;
             position: relative;
             // background-color: #866262;
             height: 100%;
             overflow: hidden;
+            @media (min-width: 992) {
+                --bs-aspect-ratio: 141.48%;
+            }
         }
         .img_item {
             position: absolute;
@@ -236,6 +281,20 @@ ul {
                 max-width: 100%;
                 object-fit: cover;
             }
+        }
+    }
+    .banner-anim {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(50px);
+        transition: all 0.6s ease-in-out;
+    }
+    &.loaded {
+        .banner-anim {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            will-change: opacity, transform;
         }
     }
 }
@@ -441,7 +500,19 @@ ul {
                 flex-direction: column;
 
                 background-color: #3b3c41;
-                transition: background-color 0.2s ease-in-out;
+                // transition: background-color 0.2s ease-in-out;
+                transition:
+                    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                    background-color 0.2s ease-in-out;
+                @media (min-width: 576px) {
+                    width: 240px;
+                    height: 240px;
+                }
+                @media (min-width: 768px) {
+                    width: 300px;
+                    height: 300px;
+                }
                 &:hover {
                     @media (min-width: 1200px) {
                         background-color: var(--color);
@@ -500,34 +571,46 @@ ul {
                 transition: all 0.3s cubic-bezier(0.43, 0.08, 0.41, 0.78);
             }
             &:hover {
-                &:after {
-                    height: 100%;
+                @media (min-width:1200px){
+                    &:after {
+                        height: 100%;
+                    }
+                    .img-content {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: translateY(0);
+                        z-index: 1;
+                    }
                 }
-                .img-content {
-                    visibility: visible;
-                    opacity: 1;
-                    transform: translateY(0);
-                    z-index: 1;
-                }
+            
             }
         }
     }
 }
 .experience {
     background-color: var(--bg-secondary);
-    &_wrapper {
-        max-width: 780px;
+    .tab_wrap{
+        padding-top: 30px;
+        max-width: 800px;
         margin: 0 auto;
+    }
+    &_wrapper {
+        // max-width: 800px;
+        // margin: 0 auto;
         position: relative;
         &:after {
             position: absolute;
             content: "";
-            left: 15%;
-           width: 1px;
-           background-color: #e4e4e4;
+            left: 25%;
+            width: 1px;
+            background-color: #e4e4e4;
             top: 0;
             height: 100%;
             transform: translateX(-15%);
+            @media (min-width:768px){
+                left: 15%;
+
+            }
         }
         .year {
             max-width: fit-content;
@@ -547,14 +630,20 @@ ul {
             }
         }
         .circle {
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
             border-radius: 50%;
             background-color: var(--color);
-            left: 62%;
+            left: 103%;
             z-index: 55;
             transform: translateX(-62%);
-            top: 0;
+            top: 5px;
+            @media (min-width:768px){
+                left: 62%;
+                width: 20px;
+            height: 20px;
+
+            }
         }
     }
 }
@@ -567,9 +656,13 @@ ul {
             content: "";
             top: 50%;
             transform: translateY(-50%);
-            width: 38%;
+            width: 25%;
             height: 1px;
             background-color: var(--color);
+            @media (min-width:992px){
+                width: 38%;
+  
+            }
         }
         &:before {
             right: 0;

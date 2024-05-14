@@ -66,25 +66,25 @@
               </div>
               <div class="offcanvas-body">
                 <ul>
-                  <li><a href="">About</a></li>
-                  <li><a href=""> Portfolio</a></li>
-                  <li><a href=""> Contact</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#works">Works</a></li>
+                  <li><a href="#contact">Contact</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <ul class="header-links d-none d-lg-flex mb-0">
-            <li><a href="">About</a></li>
-            <li><a href=""> Portfolio</a></li>
-            <li><a href=""> Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="main">
       <!-- ********************Banner***************** -->
-      <section class="bg banner-section">
-        <div class="floating-label">
+      <section class="bg banner-section section">
+        <div class="floating-label d-none d-md-block">
           <button class="tool-btn">
             <div class="expand_wrap">
               <i class="expand_wrap_top"></i>
@@ -124,17 +124,20 @@
         </div>
 
         <div class="container">
-          <div class="banner-wrap row">
-            <div class="col-lg-5 col-xl-7">
+          <div class="banner-wrap row flex-column-reverse flex-md-row gy-4">
+            <div class="col-md-6 col-xl-7">
               <div class="left-content">
-                <h1 class="title-name">I'M <span>Dummy Name</span></h1>
-                <p>Frontend Developer</p>
-                <div class="btn-wrap">
-                  <a href="" class="btn"> Contact Me</a>
+              
+                <div class="banner-anim">
+                <h1 class="title-name ">I'M <span>Dummy Name</span></h1>
+                <p class="p">Frontend Developer</p>
+                <div class="btn-wrap mb-1">
+                  <a href="" class="btn "> Contact Me</a>
                 </div>
               </div>
+              </div>
             </div>
-            <div class="col-lg-7 col-xl-5">
+            <div class="col-md-6 col-xl-5">
               <div class="img-anim">
                 <div class="img_wrap">
                   <div class="img_item">
@@ -154,16 +157,16 @@
         </div>
       </section>
       <!-- ***********************About ************************** -->
-      <section class="about section anim">
+      <section class="about section anim" id="about">
         <div class="dot-shape position-absolute">
           <figure class="mb-0">
             <img src="./images/shape-2.png" alt="dot-shape" />
           </figure>
         </div>
         <div class="container">
-          <h2 class="title">About</h2>
+          <h2 class="title fade-in">About</h2>
           <div class="about-content">
-            <p class="mb-0">
+            <p class="mb-0 fade-in">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
               libero necessitatibus amet! Numquam, veritatis assumenda quod
               minus alias, quisquam voluptatum quia, quam fugiat facilis placeat
@@ -179,11 +182,11 @@
             </p>
           </div>
           <div class="about-skills">
-            <h3 class="title text-center">My skills</h3>
+            <h3 class="title text-center fade-in">My skills</h3>
             <div class="about-skills_wrap">
-              <div class="d-flex flex-wrap wrap">
+              <div class="d-flex flex-wrap wrap ">
                 <!-- <div class="col-md-3 "> -->
-                <div class="item">
+                <div class="item fade-in">
                   <div class="icon-wrap bg">
                     <span class="icon-html5"></span>
                   </div>
@@ -191,7 +194,7 @@
                 </div>
                 <!-- </div> -->
                 <!-- <div class="col-md-3"> -->
-                <div class="item">
+                <div class="item  fade-in">
                   <div class="icon-wrap">
                     <span class="icon-css3"></span>
                   </div>
@@ -199,49 +202,49 @@
                 </div>
 
                 <!-- </div> -->
-                <div class="item">
+                <div class="item fade-in">
                   <div class="icon-wrap">
                     <span class="icon-javascript"></span>
                   </div>
                   <h4>JavaScript</h4>
                 </div>
-                <div class="item">
+                <div class="item fade-in ">
                   <div class="icon-wrap">
                     <span class="icon-react"></span>
                   </div>
                   <h4>React</h4>
                 </div>
-                <div class="item">
+                <div class="item fade-in">
                   <div class="icon-wrap">
                     <span class="icon-next-dot-js"></span>
                   </div>
                   <h4>Next</h4>
                 </div>
-                <div class="item">
+                <div class="item fade-in">
                   <div class="icon-wrap">
                     <span class="icon-git"></span>
                   </div>
                   <h4>Git Source Control</h4>
                 </div>
-                <div class="item">
+                <div class="item fade-in">
                   <div class="icon-wrap">
                     <span class="icon-sass"></span>
                   </div>
                   <h4>Sass</h4>
                 </div>
-                <div class="item">
+                <div class="item fade-in">
                   <div class="icon-wrap">
                     <span class="icon-adobexd"></span>
                   </div>
                   <h4>Adobe XD</h4>
                 </div>
-                <div class="item">
+                <div class="item fade-in">
                   <div class="icon-wrap">
                     <span class="icon-figma"></span>
                   </div>
                   <h4>Figma</h4>
                 </div>
-                <div class="item">
+                <div class="item fade-in">
                   <figure class="icon-wrap img_wrap">
                     <img src="./images/gsap-greensock.svg" alt="gsap" />
                   </figure>
@@ -253,19 +256,19 @@
         </div>
       </section>
       <!-- ------------work section--------------- -->
-      <section class="works bg section">
+      <section class="works bg section anim" id="works">
         <div class="container">
-          <h5 class="title text-center">Works</h5>
-          <div class="works_wrap">
+          <h5 class="title text-center fade-in">Works</h5>
+          <div class="works_wrap ">
             <div class="row gy-4">
-              <div class="col-md-4">
+              <div class="col-sm-6 col-md-4 fade-in">
                 <a href="" class="work_link">
                   <figure class="mb-0 ratio">
                     <img src="./images/building.jpg" alt="" />
                   </figure>
                   <div class="img-content position-absolute">
                     <h5>work1</h5>
-                    <p>
+                    <p >
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Debitis sequi sit consequuntur quisquam accusantium
                       reiciendis sint eaque, maxime temporibus aut unde
@@ -275,7 +278,7 @@
                   </div>
                 </a>
               </div>
-              <div class="col-md-4">
+              <div class="col-sm-6 col-md-4 fade-in">
                 <a href="" class="work_link">
                   <figure class="mb-0 ratio">
                     <img src="./images/code-img.jpg" alt="" />
@@ -291,7 +294,7 @@
                   </div>
                 </a>
               </div>
-              <div class="col-md-4">
+              <div class="col-sm-6 col-md-4 fade-in">
                 <a href="" class="work_link">
                   <figure class="mb-0 ratio">
                     <img src="./images/building.jpg" alt="" />
@@ -308,7 +311,7 @@
                   </div>
                 </a>
               </div>
-              <div class="col-md-4">
+              <div class="col-sm-6 col-md-4 fade-in">
                 <a href="" class="work_link">
                   <figure class="mb-0 ratio">
                     <img src="./images/code-img.jpg" alt="" />
@@ -324,7 +327,7 @@
                   </div>
                 </a>
               </div>
-              <div class="col-md-4">
+              <div class="col-sm-6 col-md-4 fade-in">
                 <a href="" class="work_link">
                   <figure class="mb-0 ratio">
                     <img src="./images/building.jpg" alt="" />
@@ -341,7 +344,7 @@
                   </div>
                 </a>
               </div>
-              <div class="col-md-4">
+              <div class="col-sm-6 col-md-4 fade-in">
                 <a href="" class="work_link">
                   <figure class="mb-0 ratio">
                     <img src="./images/code-img.jpg" alt="" />
@@ -364,8 +367,9 @@
       <!-- -------------experience Section ------------------- -->
       <section class="experience section anim">
         <div class="container">
-          <h5 class="title">Experience</h5>
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <h5 class="title fade-in">Experience</h5>
+          <div class="tab_wrap">
+          <ul class="nav nav-pills " id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
               <button
                 class="nav-link active btn"
@@ -404,14 +408,14 @@
               tabindex="0"
             >
               <div class="experience_wrapper row">
-                <div class="col-md-3 position-relative">
+                <div class="col-3 position-relative">
                   <div class="year bg">
                     <p class="mb-0">2022</p>
                   </div>
                   <span class="circle position-absolute"> </span>
                 </div>
 
-                <div class="col-md-9">
+                <div class="col-9">
                   <div class="right">
                     <h5>Software Developer</h5>
                     <h5 class="sub-ttl">webandcrafts</h5>
@@ -423,14 +427,14 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-md-3 position-relative">
+                <div class="col-3 position-relative">
                   <div class="year bg">
                     <p class="mb-0">2020</p>
                   </div>
                   <span class="circle position-absolute"> </span>
                 </div>
 
-                <div class="col-md-9">
+                <div class="col-9">
                   <div class="right">
                     <h5>Software Developer</h5>
                     <h5 class="sub-ttl">webandcrafts</h5>
@@ -452,14 +456,14 @@
               tabindex="0"
             >
               <div class="experience_wrapper row">
-                <div class="col-md-3 position-relative">
+                <div class="col-3 position-relative">
                   <div class="year bg">
                     <p class="mb-0">2022</p>
                   </div>
                   <span class="circle position-absolute"> </span>
                 </div>
 
-                <div class="col-md-9">
+                <div class="col-9">
                   <div class="right">
                     <h5>Software Developer</h5>
                     <h5 class="sub-ttl">webandcrafts</h5>
@@ -471,14 +475,14 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-md-3 position-relative">
+                <div class="col-3 position-relative">
                   <div class="year bg">
                     <p class="mb-0">2020</p>
                   </div>
                   <span class="circle position-absolute"> </span>
                 </div>
 
-                <div class="col-md-9">
+                <div class="col-9">
                   <div class="right">
                     <h5>Software Developer</h5>
                     <h5 class="sub-ttl">webandcrafts</h5>
@@ -493,19 +497,20 @@
               </div>
             </div>
           </div>
+          </div>
         </div>
       </section>
 
       <!-- -----------------CONTACT---------------- -->
-      <section class="section bg contact-me">
+      <section class="section bg contact-me anim" id="contact">
         <div class="container">
           <div class="ttl_wrap position-relative">
-            <h6 class="title text-center">Contact Me</h6>
+            <h6 class="title text-center  fade-in">Contact Me</h6>
           </div>
 
           <div class="contact-me_wrap">
             <div class="row justify-content-center gy-4">
-              <div class="col-md-6">
+              <div class="col-md-6 fade-in">
                 <a
                   href="mailto:safeelanasreen123@gmail.com"
                   class="contact_item d-flex align-items-center"
@@ -516,7 +521,7 @@
                   <p class="mb-0">safeelanasreen123@gmail.com</p>
                 </a>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 fade-in">
                 <a
                   href="tel:+919562086255"
                   class="contact_item d-flex align-items-center"
@@ -527,7 +532,7 @@
                   <p class="mb-0">+91 9562086255</p>
                 </a>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 fade-in">
                 <a
                   href="https://wa.me/+919562086255"
                   class="contact_item d-flex align-items-center"
@@ -541,7 +546,7 @@
             </div>
           </div>
           <div class="ttl_wrap position-relative">
-            <div class="social_wrap">
+            <div class="social_wrap fade-in">
               <ul class="d-flex mb-0 p-0">
                 <li>
                   <a href=""><span class="icon-linkedin"></span></a>

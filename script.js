@@ -89,3 +89,8 @@ window.addEventListener("load", () => {
   getElem.length > 0 ? (window.addEventListener('scroll', anim, false)) : null;
   getElem.length > 0 ? anim() : null;
 }, false);
+
+const Banner = document.querySelector(".banner-section");
+window.addEventListener("load", function () {
+  Banner?.classList.add("loaded");
+});
