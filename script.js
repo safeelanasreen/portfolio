@@ -94,3 +94,6 @@ const Banner = document.querySelector(".banner-section");
 window.addEventListener("load", function () {
   Banner?.classList.add("loaded");
 });
+
+
+ 

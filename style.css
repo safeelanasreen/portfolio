@@ -585,6 +585,7 @@ ul li {
 
 .experience {
   background-color: var(--bg-secondary);
+  position: relative;
 }
 .experience .tab_wrap {
   padding-top: 30px;
@@ -695,4 +696,19 @@ ul li {
 }
 .contact-me .social_wrap ul li span {
   font-size: 20px;
+}
+
+.anim-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  -webkit-clip-path: circle(100% at 50% 50%);
+          clip-path: circle(100% at 50% 50%);
+  transition: clip-path 1.5s ease, -webkit-clip-path 1.5s ease;
+}
+
+.experience.visible .anim-area {
+  -webkit-clip-path: circle(0% at 50% 50%);
+          clip-path: circle(0% at 50% 50%);
 }/*# sourceMappingURL=style.css.map */
