@@ -101,17 +101,17 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const counter = entry.target;
-        let endValue = counter.textContent;
-        let startValue = 0;
+        let endValue = '0'+counter.textContent;
+        let startValue = 0 ;
         let updating = setInterval(() => {
           startValue += endValue / 200;
-          counter.textContent = startValue.toFixed(0);
+          counter.textContent = '0'+ startValue.toFixed(0);
           if (startValue > endValue) {
-            counter.textContent = endValue;
+            counter.textContent =   endValue;
             clearInterval(updating);
             observer.unobserve(counter);
           }
-        }, 10);
+        }, 5);
       }
     });
   },
