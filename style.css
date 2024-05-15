@@ -470,7 +470,7 @@ ul li {
 .about .about-content {
   align-items: baseline;
 }
-.about .about-content p {
+.about .about-content .about_p {
   margin-bottom: 1rem;
   font-size: 18px;
   font-weight: 400;
@@ -478,7 +478,7 @@ ul li {
   position: relative;
   padding-left: 70px;
 }
-.about .about-content p::before {
+.about .about-content .about_p::before {
   position: absolute;
   content: "";
   width: 50px;
@@ -542,6 +542,32 @@ ul li {
 .about-skills_wrap .item .icon-wrap.img_wrap img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+.about_detail {
+  position: relative;
+  padding-top: 40px;
+}
+@media (min-width: 992px) {
+  .about_detail {
+    padding-top: 70px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+.about_detail .count_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about_detail .count_wrap span {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--color);
+}
+.about_detail .count_wrap p {
+  margin-bottom: 0;
+  font-size: 20px;
 }
 
 .works_wrap .work_link {
@@ -708,7 +734,7 @@ ul li {
   background-color: var(--bg-secondary);
   -webkit-clip-path: circle(0% at 50% 50%);
           clip-path: circle(0% at 50% 50%);
-  transition: clip-path 1.5s ease, -webkit-clip-path 1.5s ease;
+  transition: clip-path 2s ease, -webkit-clip-path 2s ease;
 }
 
 .section.visible .anim-area {
