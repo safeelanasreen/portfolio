@@ -567,7 +567,12 @@ ul li {
 }
 .about_detail .count_wrap p {
   margin-bottom: 0;
-  font-size: 20px;
+  font-size: 16px;
+}
+@media (min-width: 768px) {
+  .about_detail .count_wrap p {
+    font-size: 20px;
+  }
 }
 
 .works_wrap .work_link {
