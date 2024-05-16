@@ -101,7 +101,7 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const counter = entry.target;
-        let endValue = '0'+counter.textContent;
+        let endValue = '0' + counter.textContent;
         let startValue = 0 ;
         let updating = setInterval(() => {
           startValue += endValue / 200;
@@ -120,3 +120,6 @@ const observer = new IntersectionObserver(
 document
   .querySelectorAll(".counter")
   .forEach((counter) => observer.observe(counter));
+
+
+ 

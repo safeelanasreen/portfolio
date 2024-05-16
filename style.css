@@ -166,8 +166,12 @@ img {
 .header .offcanvas_wrap ul li {
   margin-bottom: 10px;
 }
-.header .offcanvas_wrap ul li a {
+.header .offcanvas_wrap ul li span {
+  color: var(--color);
+}
+.header .offcanvas_wrap ul li a p {
   font-size: 16px;
+  color: var(--color);
 }
 .header .offcanvas_wrap .offcanvas {
   --bs-offcanvas-border-width: 0;

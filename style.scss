@@ -149,8 +149,16 @@ img {
             margin-bottom: 0;
             li {
                 margin-bottom: 10px;
+                span{
+                    color: var(--color);
+                }
                 a {
+                    p{
+
                     font-size: 16px;
+                    color: var(--color);
+                }
+
                 }
             }
         }
